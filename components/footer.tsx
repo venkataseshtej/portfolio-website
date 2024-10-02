@@ -1,15 +1,22 @@
 import React from "react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <small className="mb-2 block text-xs">
-        &copy; 2030 Ricardo. All rights reserved.
+    <footer className="px-4 mb-10 text-center text-gray-500">
+      <small className="block mb-2 text-xs">
+        &copy; {currentYear} Ricardo. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-        Framer Motion, React Email & Resend, Vercel hosting.
+        Built with{" "}
+        <a
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
+          Next.js
+        </a>{" "}
       </p>
     </footer>
   );
